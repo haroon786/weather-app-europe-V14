@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <p style="color: white;">{{"Europe Weather"| translate}}</p>
+    </mat-toolbar>
+
+    <mat-accordion class="app-nav-accordion">
+      <mat-nav-list>
+        <div>
+        <a mat-list-item (click)="change('Italy')">{{"Italy"| translate}}
+          </a>
+        <a mat-list-item (click)="change('Turkey')">{{"Turkey"|translate}} </a>
+        <a mat-list-item (click)="change('Austria')">{{"Austria" | translate}}
+
+        </a>
+        <a mat-list-item (click)="change('Greece')">{{"Greece" | translate }}
+
+        </a>
+        <a mat-list-item (click)="change('Norway')">{{"Norway" | translate }}
+
+        </a>
+        </div>
+        <div>
+          <img  alt="Itlay" width="30px"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/IT.svg" />
+            <img  alt="Itlay" width="30px"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg" />
+            <img  alt="Itlay" width="30px"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/AT.svg" />
+            <img  alt="Itlay" width="30px"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GR.svg" />
+            <img  alt="Itlay" width="30px"
+            src="http://purecatamphetamine.github.io/country-flag-icons/3x2/NO.svg" />
+        </div>
+        <!-- <a mat-list-item  [routerLink]="['/university-college']" routerLinkActive="router-link-active">University</a> -->
+
+      </mat-nav-list>
+
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <app-language-control></app-language-control>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div *ngIf="arr.length>0">
+      <app-home-weather [forecastArr]="forecastarr" [weatherData]="countryWeatherArr"></app-home-weather>
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

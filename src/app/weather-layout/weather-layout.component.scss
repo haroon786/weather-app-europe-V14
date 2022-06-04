@@ -1,0 +1,55 @@
+.sidenav-container {
+	height: 100%;
+}
+.mat-sidenav {
+	background-color: rgb(15, 2, 27);
+}
+.sidenav {
+	width: 200px;
+	.mat-toolbar {
+		background: inherit;
+	}
+}
+.mat-toolbar.mat-primary {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+    background-color: rgb(15, 2, 27);
+}
+.app-nav-accordion {
+	.mat-expansion-panel {
+		border-radius: 0px !important;
+		box-shadow: none !important;
+		.mat-expansion-panel-body {
+			padding: 0px;
+		}
+		.mat-expansion-panel-header {
+			height: 40px;
+			padding: 0px 24px 0px 16px;
+		}
+		.mat-expansion-panel-header-title {
+			font-size: 11px;
+			font-weight: 500;
+		}
+	}
+	.mat-expansion-panel.mat-expansion-panel-spacing {
+		margin: 0px;
+	}
+	>mat-nav-list {
+
+    display: grid;
+    grid-template-columns: 60% 30%;
+    gap: 20px;
+		>div >a{
+			color: white;
+      font-size: larger;
+
+
+		}
+    >div>img
+    {
+     padding: auto;
+     height: 43px;
+    }
+	}
+}

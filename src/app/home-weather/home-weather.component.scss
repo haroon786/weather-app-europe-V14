@@ -1,0 +1,70 @@
+.sun {
+  margin-top: 10px;
+  color: yellow;
+  filter: drop-shadow(1px 1px 10px yellow);
+}
+
+.moon {
+  margin-top: 10px;
+  color: white;
+  filter: drop-shadow(1px 1px 10px white);
+}
+
+.cloudDiv {
+  margin-top: -40px;
+}
+
+.cloud {
+  color: rgb(104, 175, 197);
+  filter: drop-shadow(1px 1px 5px rgb(104, 175, 197));
+  animation-name: cloudMovement;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes cloudMovement {
+  from {
+    margin-left: -55px;
+  }
+
+  to {
+    margin-left: 95px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+ // background: linear-gradient(90deg, #361854 0%, #3b0435 26%);
+
+  > div {
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 250px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 30px;
+    cursor: pointer;
+    border-color: #3b0435;
+    border: 2px solid #008080;
+    padding: 5px;
+  }
+
+}
+
+divWeatherMain > p:nth-child(2) {
+  background: red;
+}
+
+.forecastHeadline {
+  font-weight: 800;
+
+}
+
+p{
+  font-size: large;
+}

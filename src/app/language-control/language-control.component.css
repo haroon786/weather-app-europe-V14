@@ -1,0 +1,28 @@
+::ng-deep
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option
+{
+  height: 1.3em !important;
+    line-height: 2em !important;
+    height: 1em !important;
+    font-size:20px !important;
+}
+::ng-deep
+.mat-option-text
+{
+  font-size: 15px!important;
+}
+
+::ng-deep
+.mat-select-panel {
+  background: #008080  !important;
+  color: white !important;
+}
+
+.mat-option {
+ color: aliceblue !important;
+}
+.mat-toolbar.mat-primary
+{
+ color: white !important;
+}
+
